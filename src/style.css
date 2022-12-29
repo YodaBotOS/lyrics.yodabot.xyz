@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
     --bg-color: #363636;
@@ -46,6 +47,7 @@ nav .elements {
     column-gap: 1rem;
     list-style: none;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 nav .elements a {
