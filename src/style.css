@@ -30,6 +30,7 @@ nav .title {
     font-weight: bold;
     color: #fff;
     margin-left: 1.5rem;
+    margin-right: 1rem;
     font-family: "Bungee Shade", sans-serif;
 }
 
@@ -222,6 +223,13 @@ input.search-song {
 }
 
 @media (max-width: 480px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 548px) and (max-width: 595px) {
+    /* Inline & spacing issues */
     nav {
         display: none;
     }
