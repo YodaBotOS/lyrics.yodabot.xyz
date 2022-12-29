@@ -15,24 +15,6 @@ async function performAutocomplete(query) {
     return await r.json();
 }
 
-async function displayAutocomplete(e) {
-    if (e.target.value === "") {
-        autocomplete.innerHTML = "";
-        return;
-    }
-
-    let suggestions = await performAutocomplete(e.target.value);
-    autocomplete.innerHTML = "";
-    for (let suggestion of suggestions) {
-        let li = document.createElement("li");
-        li.addEventListener('click', async function (e) {
-            await displayLyrics(this.innerText);
-        });
-        li.innerText = `${suggestion.title} - ${suggestion.artists.join(", ")}`;
-        autocomplete.appendChild(li);
-    }
-}
-
 async function displayLyrics(query) {
     if (!query) return;
 
@@ -52,8 +34,27 @@ async function displayLyrics(query) {
     autocomplete.innerHTML = "";
 }
 
+async function displayAutocomplete(e) {
+    if (e.target.value === "") {
+        autocomplete.innerHTML = "";
+        return;
+    }
+
+    let suggestions = await performAutocomplete(e.target.value);
+    autocomplete.innerHTML = "";
+    for (let suggestion of suggestions) {
+        let li = document.createElement("li");
+        li.addEventListener('click', async function (e) {
+            await displayLyrics(e.target.innerText);
+        });
+        li.innerText = `${suggestion.title} - ${suggestion.artists.join(", ")}`;
+        autocomplete.appendChild(li);
+    }
+}
+
 input.addEventListener('input', displayAutocomplete);
 input.addEventListener('propertychange', displayAutocomplete);
+input.addEventListener('change', displayAutocomplete);
 input.addEventListener('keydown', async function (e) {
     if (e.keyCode === 13 && e.target.value !== "") {
         await displayLyrics(input.value);
