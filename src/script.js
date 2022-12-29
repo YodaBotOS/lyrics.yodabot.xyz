@@ -16,6 +16,11 @@ async function performAutocomplete(query) {
 }
 
 async function displayAutocomplete(e) {
+    if (e.target.value === "") {
+        autocomplete.innerHTML = "";
+        return;
+    }
+
     let suggestions = await performAutocomplete(e.target.value);
     autocomplete.innerHTML = "";
     for (let suggestion of suggestions) {
