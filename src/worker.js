@@ -4,17 +4,21 @@ async function handleRequest(request) {
     const req_url = new URL(request.url);
 
     let pathname = '';
-    if (req_url.pathname == '/') {
+    let content_type = '';
+    if (req_url.pathname === '/') {
         pathname = '/index.html';
         content_type = 'text/html;charset=UTF-8'
-    } else if (req_url.pathname == '/style.css') {
+    } else if (req_url.pathname === '/style.css') {
         pathname = '/style.css';
         content_type = 'text/css;charset=UTF-8';
-    } else if (req_url.pathname == '/script.js') {
+    } else if (req_url.pathname === '/script.js') {
         pathname = '/script.js';
         content_type = 'text/javascript;charset=UTF-8';
+    } else if (req_url.pathname === '/favicon.png') {
+        pathname = '/favicon.png';
+        content_type = 'image/png';
     } else {
-        return Response("File not found.", options);
+        return new Response("File not found.", {status: 404});
     }
 
     const response = await fetch(url + pathname);
