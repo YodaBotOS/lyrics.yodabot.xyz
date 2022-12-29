@@ -56,7 +56,7 @@ input.addEventListener('input', displayAutocomplete);
 input.addEventListener('propertychange', displayAutocomplete);
 input.addEventListener('change', displayAutocomplete);
 input.addEventListener('keydown', async function (e) {
-    if (e.keyCode === 13 && e.target.value !== "") {
+    if (e.code === 'Enter' && e.target.value !== "") {
         await displayLyrics(input.value);
     }
 });
