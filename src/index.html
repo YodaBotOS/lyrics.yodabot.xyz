@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lyrics</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav>
+            <h1 class="title"><a href="https://lyrics.yodabot.xyz">Lyrics</a></h1>
+
+            <div class="elements">
+                <a href="https://api.yodabot.xyz/">API</a>
+                <a href="https://github.com/YodaBotOS/lyrics.yodabot.xyz">GitHub</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="header">
+                <h1><a href="https://lyrics.yodabot.xyz">Lyrics</a></h1>
+                <p>Find your lyrics!</p>
+            </div>
+
+            <input type="text" name="song" class="search-song" id="search-input" placeholder="Type the song you want" autofocus>
+            <ul class="autocomplete" id="autocomplete">
+<!--                <li>abc</li>-->
+<!--                <li>def</li>-->
+            </ul>
+
+            <div class="result">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                <div class="res-title" id="res-title"></div>
+                <div class="res-artist" id="res-artist"></div>
+                <div class="res-lyrics" id="res-lyrics"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            Made with <span id="heart">&hearts;</span> by proguy914629
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
