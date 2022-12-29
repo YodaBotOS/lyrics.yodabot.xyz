@@ -34,6 +34,8 @@ async function displayAutocomplete(e) {
 }
 
 async function displayLyrics(query) {
+    if (!query) return;
+
     r_title.innerText = "";
     r_artist.innerText = "";
     r_lyrics.innerText = "";
@@ -53,7 +55,7 @@ async function displayLyrics(query) {
 input.addEventListener('input', displayAutocomplete);
 input.addEventListener('propertychange', displayAutocomplete);
 input.addEventListener('keydown', async function (e) {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && e.target.value !== "") {
         await displayLyrics(input.value);
     }
 });
