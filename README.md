@@ -16,5 +16,10 @@ You can also visit [the API playground](https://api.yodabot.xyz/playground) to t
 
 YodaBot API has a lot more features than just lyrics. You can also use it to predict genre of an audio, analyze an image, grammar correction, OCR, and more!
 
+## What is [worker.js](/src/worker.js)?
+The [`worker.js`](/src/worker.js) file is a script for a Cloudflare Workers.
+
+[This service](https://lyrics.yodabot.xyz) is hosted on Cloudflare Workers (cause I'm not bothered to host this in a server).
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
