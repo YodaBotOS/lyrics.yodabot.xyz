@@ -101,6 +101,10 @@ main {
     margin-top: 1rem;
 }
 
+.header, nav {
+    user-select: none;
+}
+
 input.search-song {
     width: 75%;
     max-width: 750px;
