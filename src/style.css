@@ -150,6 +150,10 @@ input.search-song {
     margin: 2rem 1rem auto;
 }
 
+.result::selection, .result *::selection {
+    background-color: #e64620;
+}
+
 .result .res-title {
     font-size: 2rem;
     font-weight: 700;
