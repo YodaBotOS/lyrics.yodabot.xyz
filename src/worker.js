@@ -5,7 +5,7 @@ async function handleRequest(request) {
 
     let pathname = '';
     let content_type = '';
-    if (req_url.pathname === '/') {
+    if (req_url.pathname === '/' || req_url.pathname === '/index.html') {
         pathname = '/index.html';
         content_type = 'text/html;charset=UTF-8'
     } else if (req_url.pathname === '/style.css') {
