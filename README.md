@@ -7,7 +7,7 @@ You can view a live demo on [lyrics.yodabot.xyz](https://lyrics.yodabot.xyz)
 ## Running the demo
 This script is really straightforward. All the necessary files are in the [`src`](/src) folder. You can run the demo by opening the [`index.html`](/src/index.html) file in your browser.
 
-Javascript is also provided, but without using any wrappers or libraries. You can find the Javascript code in the [`index.js`](/src/index.js) file.
+Javascript is also provided, but without using any wrappers or libraries. You can find the Javascript code in the [`script.js`](/src/script.js) file.
 
 ## Using the API
 View [the API documentation](https://api.yodabot.xyz/docs) for more information on using this API.
